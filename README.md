@@ -1,4 +1,4 @@
-# Simple Product Dashboard
+# Simple Product Dashboard (Assignment 5)
 
 ## File Organization
 - `src/App.jsx`: Root component maintaining application state (`showProducts`, `name`) and managing conditional UI rendering.
