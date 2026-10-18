@@ -1,16 +1,11 @@
-# React + Vite
+# Simple Product Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## File Organization
+- `src/App.jsx`: Root component maintaining application state (`showProducts`, `name`) and managing conditional UI rendering.
+- `src/components/ProductList.jsx`: Renders the array of static product objects using `.map()` and unique IDs as keys.
+- `src/components/Product.jsx`: Reusable stateless display component for an individual product.
+- `src/components/Card.jsx`: Layout container utilizing React composition (`children`) to wrap content.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Challenges Faced
+- Ensuring component composition (`Card.jsx`) remained completely decoupled from the data rendered inside it.
+- Managing controlled input state and toggle behavior cleanly without using unauthorized hooks like `useEffect`.
